@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="../img\1.1.jpg">
+    <title>about center</title>
+    <style>
+       .navbar {
+            background-color: #FFF !important;
+            border: none;
+            box-shadow: none;
+            flex-direction: row;
+            height: 90px;
+        }
+        .navbar-nav {
+            flex-direction: row;
+            background-color: #FFF;
+            white-space: nowrap; 
+        }
+        .nav-item {
+            margin: 0 5px;
+            margin-right: 25px;
+        }
+        
+        
+        .fa-globe {
+            color: #208f18;
+        }
+        .nav-link:hover {
+            position: relative;
+            color: #208f18;
+        }
+        .nav-link:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #208f18;
+            transition: width 0.3s;
+        }
+        .language-icon .dropdown-menu {
+            left: 200px;
+            right: auto;
+            margin-top: 0.25rem;
+        }
+        @media (max-width: 768px) {
+            .nav-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-green-50">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="">
+  <img src="../img/h.jpg" alt="Logo" style="width: 280px; height: auto;">
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex flex-column flex-lg-row justify-content-center">
+          <!-- Nav Links -->
+          <li class="nav-item">
+            <a class="nav-link active d-lg-none border-bottom " href="index.php">Home</a>
+            <a class="nav-link active d-none d-lg-block" href="index.php" style="margin-top: 10px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="about-center.html">About Center</a>
+            <a class="nav-link d-none d-lg-block" href="about-center.html" style="margin-top: 10px;">About Center</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="decisions.php">Decisions</a>
+            <a class="nav-link d-none d-lg-block" href="decisions.php" style="margin-top: 10px;">Decisions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="#">Scientific Journal</a>
+            <a class="nav-link d-none d-lg-block" href="#" style="margin-top: 10px;">Scientific Journal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="news.php">News</a>
+            <a class="nav-link d-none d-lg-block" href="news.php" style="margin-top: 10px;">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="research.php">Research</a>
+            <a class="nav-link d-none d-lg-block" href="research.php" style="margin-top: 10px;">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none border-bottom" href="contact-us.html">Contact Us</a>
+            <a class="nav-link d-none d-lg-block" href="contact-us.html" style="margin-top: 10px;">Contact Us</a>
+          </li>
+        </ul>
+        <div class="dropdown mt-3">
+        <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white; color: #333;">
+          <i class="fas fa-globe"></i>
+        </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="../index.php">العربي</a></li>
+            <li><a class="dropdown-item" href="">English</a></li>
+          </ul>
+        </div>
+        <form class="d-flex mt-3 justify-content-center align-items-center" role="search" method="GET" action="search_results.php">
+            <input 
+                class="form-control me-2" 
+                type="search" 
+                name="query" 
+                placeholder="Search for resolution" 
+                aria-label="بحث" 
+                style="width: 200px; height: 40px; border-radius: 8px; font-size: 16px;"
+            >
+            <button 
+                class="btn btn-success" 
+                type="submit" 
+                style="height: 40px; border-radius: 8px; padding: 0 25px; font-size: 16px;  "
+            >
+            Search
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>   
+<style>
+    /* Adding custom font */
+    @font-face {
+        font-family: 'SadokArtBold';
+        src: url('/alfont_com_ArbFONTS-19720-sadokartbold_3.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .card {
+        height: 450px; /* Set card height */
+        position: relative; /* Maintain text and image overlay */
+        border-radius: 0; /* Remove rounded corners */
+    }
+
+    .card-img {
+        height: 100%; /* Set image height to 100% to fill the card */
+        object-fit: cover; /* Ensure the image fills the card without distortion */
+        width: 100%; /* Match the image width to the card width */
+        border-radius: 0; /* Remove rounded corners from the image as well */
+    }
+
+    .card-img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center; /* Center text horizontally */
+        align-items: center; /* Center text vertically */
+        color: white; /* Text color */
+        font-size: 40px; /* Font size */
+        font-weight: bold; /* Font weight */
+        text-align: center; /* Center-align text */
+        font-family: 'SadokArtBold'; /* Use custom font */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    }
+    .card-text {
+        margin-top: 70px;
+    }
+</style>
+
+<div class="card text-bg-dark">
+    <img src="../img/76.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <p class="card-text text-white">On this page, you will find all the news.</p> <!-- Text in white color -->
+    </div>
+</div>
+<!-- Add Bootstrap CSS and Icons library in the head if not already included -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+
+<section class="container text-center">
+  <style>
+    
+.section-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px 0;
+        }
+        .box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
+        }
+        .box i {
+            font-size: 40px;
+            color: #208f18;
+            margin-bottom: 10px;
+        }
+        .box h3 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .box p {
+            font-size: 16px;
+            color: #777;
+        }
+</style>
+  </style>
+    <div class="section-boxes">
+        <!-- Vision -->
+        <div class="box">
+            <i class="fas fa-eye"></i>
+            <h3>Vision</h3>
+            <p>Invest in, protect, and develop natural resources to improve agricultural and livestock production through scientific methods.</p>
+        </div>
+        
+        <!-- Mission -->
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Mission</h3>
+            <p>Lead in agricultural research, environmental science, and climate studies to enhance food security and ensure resource sustainability.</p>
+        </div>
+
+        <!-- Objectives -->
+        <div class="box">
+            <i class="fas fa-bullseye"></i>
+            <h3>Objectives</h3>
+            <p>1. Achieve food security</p>
+            <p>2. Expand cooperation locally, regionally, and internationally</p>
+            <p>3. Develop human resources and increase staff efficiency</p>
+            <p>4. Serve the community and environment by enhancing the center's positive values</p>
+        </div>
+    </div>
+</section>
+
+<div class="departments-container">
+    <div class="department-box">
+        <h3 style="margin-top: 10px; font-size: 28px; color: #2b7a3f; font-weight: bold;">General Administration</h3>
+        <p style="margin-top: 8px; font-size: 20px;">Responsible for overseeing all the center’s departments and coordinating their activities to ensure the achievement of the center’s set goals and mission.</p>
+        <p><strong>Phone Number:</strong> 0987654321</p>
+        <p><strong>Email:</strong> general@center.org</p>
+        <div id="extra-departments" style="display: none; margin-top: 10px;">
+            <div>
+                <h4 style="margin-top: 15px; font-size: 24px; color: #2b7a3f; font-weight: bold;">Research and Studies Department</h4>
+                <p style="margin-top: 7px; font-size: 20px;">Specializes in preparing research study programs, monitoring their implementation, and preparing periodic execution reports in coordination with branch managers, department heads, and research team leaders.</p>
+                <p><strong>Phone Number:</strong> 0123456789</p>
+                <p><strong>Email:</strong> research@center.org</p>
+            </div>
+            <div>
+                <h4 style="margin-top: 15px; font-size: 24px; color: #2b7a3f; font-weight: bold;">Technical Affairs Department</h4>
+                <p style="margin-top: 7px; font-size: 20px;">Specializes in supervising procurement, construction, and maintenance activities, as well as developing plans for laboratory upgrades and technical specifications for each department’s equipment.</p>
+                <p><strong>Phone Number:</strong> 0123456789</p>
+                <p><strong>Email:</strong> technical@arc.gov.ly</p>
+            </div>
+            <div>
+                <h4 style="margin-top: 15px; font-size: 24px; color: #2b7a3f; font-weight: bold;">Administrative and Financial Affairs Department</h4>
+                <p style="margin-top: 7px; font-size: 20px;">Handles administrative and financial matters within the center, including personnel affairs, budgeting, accounts, services, public relations, archives, and storage.</p>
+                <p><strong>Phone Number:</strong> 0123456789</p>
+                <p><strong>Email:</strong> admin@arc.gov.ly</p>
+            </div>
+            <div>
+                <h4 style="margin-top: 15px; font-size: 24px; color: #2b7a3f; font-weight: bold;">Media and Outreach Department</h4>
+                <p style="margin-top: 7px; font-size: 20px;">Responsible for preparing and executing media and outreach programs aimed at promoting the center and its research activities, as well as preparing periodic bulletins and organizing or participating in exhibitions.</p>
+                <p><strong>Phone Number:</strong> 0123456789</p>
+                <p><strong>Email:</strong> media@arc.gov.ly</p>
+            </div>
+        </div>
+        <button class="show-more" onclick="toggleDepartments()">Show More</button>
+       
+    
+    </div>
+   
+
+<script>
+function toggleDepartments() {
+    const extraDepartments = document.getElementById('extra-departments');
+    if (extraDepartments.style.display === 'none') {
+        extraDepartments.style.display = 'block';
+    } else {
+        extraDepartments.style.display = 'none';
+    }
+}
+</script>
+
+<style>
+    .departments-container {
+        margin: 0 20px;
+    }
+
+    .department-box {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        border: 1px solid #00A991;
+        border-radius: 8px;
+        text-align: left; /* النص يبدأ من الجهة اليسرى */
+    }
+
+    .department-box h3 {
+        color: #2b7a3f;
+        margin-bottom: 10px;
+        text-align: left; /* العناوين تبدأ من اليسار */
+    }
+
+    .department-box p {
+        color: #333;
+        line-height: 1.6;
+        font-size: 18px;
+        text-align: left; /* الفقرات تبدأ من اليسار */
+    }
+</style>
+
+
+<footer class="w-[100%] bg-gray-100 py-4 mt-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-gray-700">
+        <!-- حقوق النشر -->
+        <div class="mb-2 md:mb-0 text-center md:text-right">
+<p>© 2024 Agricultural Research Center - All Rights Reserved</p>
+</div>
+
+        
+        <!-- مواقع التواصل -->
+        <div class="flex items-center justify-center md:justify-end space-x-4 md:space-x-8">
+            <a href="https://www.facebook.com/p/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%A8%D8%AD%D9%88%D8%AB-%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D9%8A%D8%A9-arclibya-100068484918462/">
+                <img src="../img/icon/Facebook.png" alt="Facebook" class="h-6 w-6">
+            </a>
+            <a href="#">
+                <img src="../img/icon/Twitter.png" alt="Twitter" class="h-6 w-6">
+            </a>
+            <a href="#">
+                <img src="../img/icon/instgram.png" alt="Instagram" class="h-6 w-6">
+            </a>
+            <a href="#">
+                <img src="../img/icon/Website.png" alt="Website" class="h-6 w-6">
+            </a>
+        </div>
+        
+        <!-- البرمجة -->
+        <div class="mt-2 md:mt-0 text-center md:text-left">
+<p>Developed by Moez Jalal | <a href="https://wa.me/218942933793" class="text-blue-500 hover:underline">Contact via WhatsApp</a></p>
+</div>
+
+    </div>
+</footer>
+
+
+<style>
+    .bi {
+        font-size: 1.5rem; /* Adjust icon size as needed */
+        color: #208f18; /* Optional: Change color as needed */
+    }
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
